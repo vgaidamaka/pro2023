@@ -1,0 +1,11 @@
+body{
+
+background-image: url("img/orn.png");
+background-position: center;
+<!--background-size: 100%;-->
+background-repeat: repeat-x repeat-y;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-right: 2%;
+  margin-left: 2%;
+}
