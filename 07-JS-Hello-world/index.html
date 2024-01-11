@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hello world</title>
+<meta charset="utf-8">
+<script>
+function MyFirstScript()
+{
+alert('Hello World!');
+console.log('Hello World!');
+}
+
+function MySecondScript(){
+//document.write('Hello World!');
+document.write("<p style='color: green; font-size: 56pt;'><b>"+"Hello World!"+"</b></p>");
+}
+
+function MyThirdScript(){
+//id="third"
+document.getElementById("third").innerHTML='Hello World!';
+}
+
+</script>
+</head>
+
+<body>
+<h1>Hello World automātiskā izpilde</h1>
+<p>Tiks ģenerēts paziņojums logā un konsolē</p>
+<script>
+alert('Hello World!');
+console.log('Hello World!');
+</script>
+<h1>Hello World ar pogu</h1>
+<p>Skripts tiks izpildīts pēc pogas nospiešanas</p>
+<button onclick="MyFirstScript()">Pirmā poga (alert un console.log)</button>
+<h1>Hello World</h1>
+<!--<p onmouseover="MyFirstScript()">Skripts darbosies, ja uzspiest šo rindu vai ievilkt kursoru</p>
+!-->
+<h1>Hello world rindokopā un dokumentā</h1>
+<p id="third">Ierakstīt 'Hello World' dokumentā</p>
+<button onclick="MySecondScript()">Otrā poga</button>
+<button onclick="MyThirdScript()">Trešā poga</button>
+</body>
+</html>

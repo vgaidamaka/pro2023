@@ -10,12 +10,6 @@ background-repeat: repeat-x repeat-y;
   margin-left: 2%;
 }
 
-.btn {
-  
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
 .original-button {
   display: inline-block;
   align-items: center;
