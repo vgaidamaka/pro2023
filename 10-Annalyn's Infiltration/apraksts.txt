@@ -1,0 +1,61 @@
+
+Ievads
+Būla vērtība ir viena no divām vērtībām: truevai false. Loģiskie operatori ( !, &&, ||) parasti tiek izmantoti ar Būla vērtībām, un tie atgriež Būla vērtību.
+
+Instrukcijas
+Šajā uzdevumā jūs ieviesīsit meklējumu loģiku jaunai RPG spēlei, kuru izstrādā draugs. Spēles galvenā varone ir Annalina, drosmīga meitene ar niknu un lojālu mājdzīvnieku suni. Diemžēl notiek nelaime, jo viņas labākā draudzene tika nolaupīta, mežā meklējot ogas. Annalina mēģinās atrast un atbrīvot savu labāko draugu, pēc izvēles ņemot līdzi savu suni šajā meklējumā.
+
+Pēc kāda laika, kas pavadīts, sekojot sava labākā drauga pēdām, viņa atrod nometni, kurā atrodas viņas labākā draudzene. Izrādās, ka ir divi nolaupītāji: varens bruņinieks un viltīgs strēlnieks.
+
+Pēc nolaupītāju atrašanas Annalina apsver, kurā no šīm darbībām viņa varētu iesaistīties:
+
+Ātrs uzbrukums : ātrs uzbrukums var tikt veikts, ja bruņinieks guļ , jo ir nepieciešams laiks, lai viņš uzvilktu bruņas, tāpēc viņš būs neaizsargāts .
+Spiegs : grupu var izspiegot, ja vismaz viens no viņiem ir nomodā . Pretējā gadījumā spiegošana ir laika izšķiešana.
+Signalizēt ieslodzīto : ieslodzītajam var signalizēt ar putnu skaņām, ja ieslodzītais ir nomodā un strēlnieks guļ , jo strēlnieki ir apmācīti signalizēt putniem, lai viņi varētu pārtvert ziņojumu.
+Brīvais ieslodzītais : Annalina var mēģināt ielavīties nometnē, lai atbrīvotu ieslodzīto. Tā ir riskanta darbība, un tā var gūt panākumus tikai vienā no diviem veidiem:
+Ja Annalinai ir savs mājas suns, viņa var izglābt ieslodzīto, ja strēlnieks guļ . Bruņinieks ir nobijies no suņa, un strēlniekam nebūs laika sagatavoties, pirms Annalina un ieslodzītais varēs aizbēgt.
+Ja Annalinai nav sava suņa, tad viņai un ieslodzītajam jābūt ļoti viltīgiem! Annalina var atbrīvot ieslodzīto, ja ieslodzītais ir nomodā un gan bruņinieks , gan strēlnieks guļ , taču, ja ieslodzītais guļ, viņus nevar izglābt : ieslodzīto pārsteigs Annalinas pēkšņā parādīšanās un pamodinātu bruņinieku un strēlnieku.
+Jums ir četri uzdevumi: ieviest loģiku, lai noteiktu, vai iepriekš minētās darbības ir pieejamas, pamatojoties uz trīs mežā atrasto personāžu stāvokli un to, vai Annalinas mājdzīvnieks ir vai nav.
+
+Ieviesiet funkciju ar nosaukumu canExecuteFastAttack, kas iegūst Būla vērtību, kas norāda, vai bruņinieks ir nomodā. Šī funkcija atgriežas true, ja ir pieejama darbība Fast Attack, pamatojoties uz rakstzīmes stāvokli. Pretējā gadījumā atgriež false:
+
+const knightIsAwake = true;
+canExecuteFastAttack(knightIsAwake);
+// => false
+
+Iestrēdzis? Atklājiet padomus
+Atveras modālā
+Ieviesiet funkciju ar nosaukumu canSpy, kas ņem trīs Būla vērtības, norādot, vai attiecīgi bruņinieks, strēlnieks un ieslodzītais ir nomodā. Funkcija atgriežas true, ja ir pieejama darbība “Spiegot”, pamatojoties uz rakstzīmju stāvokli. Pretējā gadījumā atgriež false:
+
+const knightIsAwake = false;
+const archerIsAwake = true;
+const prisonerIsAwake = false;
+canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake);
+// => true
+
+Iestrēdzis? Atklājiet padomus
+Atveras modālā
+Īstenojiet funkciju ar nosaukumu canSignalPrisoner, kas iegūst divas Būla vērtības, norādot, vai strēlnieks un ieslodzītais ir nomodā. Funkcija atgriežas true, ja ir pieejama darbība “Signēt ieslodzīto”, pamatojoties uz rakstzīmju stāvokli. Pretējā gadījumā atgriež false:
+
+const archerIsAwake = false;
+const prisonerIsAwake = true;
+canSignalPrisoner(archerIsAwake, prisonerIsAwake);
+// => true
+
+Iestrēdzis? Atklājiet padomus
+Atveras modālā
+Ieviesiet funkciju ar nosaukumu canFreePrisoner, kas ņem četras Būla vērtības. Pirmie trīs parametri norāda, vai attiecīgi bruņinieks, strēlnieks un ieslodzītais ir nomodā. Pēdējais parametrs norāda, vai Annalinas mājdzīvnieks ir klāt. Funkcija atgriežas true, ja ir pieejama darbība “Brīva ieslodzītais”, pamatojoties uz varoņu stāvokli un Annalinas mājdzīvnieka suņa klātbūtni. Pretējā gadījumā tas atgriež false:
+
+const knightIsAwake = false;
+const archerIsAwake = true;
+const prisonerIsAwake = false;
+const petDogIsPresent = false;
+canFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsPresent);
+// => false
+
+Iestrēdzis? Atklājiet padomus
+Atveras modālā
+Kā atkļūdot
+Ja pārbaude neizdodas, tiek parādīts ziņojums, kas apraksta, kas nogāja greizi un kādai ievadei. Varat arī izmantot to, ka consoletiks parādīta arī jebkura izvade. Varat rakstīt uz konsoli, izmantojot:
+
+console.log('Debug message');

@@ -1,0 +1,145 @@
+const knightIsAwake = true;
+const expected = false;
+expect(canExecuteFastAttack(knightIsAwake)).toBe(expected);
+
+const knightIsAwake = false;
+const expected = true;
+expect(canExecuteFastAttack(knightIsAwake)).toBe(expected);
+
+
+
+const knightIsAwake = false;
+const archerIsAwake = false;
+const prisonerIsAwake = false;
+const expected = false;
+expect(canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake)).toBe(
+      expected,
+    );
+
+const knightIsAwake = false;
+const archerIsAwake = false;
+const prisonerIsAwake = true;
+const expected = true;
+expect(canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake)).toBe(
+      expected,
+    );
+
+const knightIsAwake = false;
+const archerIsAwake = true;
+const prisonerIsAwake = false;
+const expected = true;
+expect(canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake)).toBe(
+      expected,
+    );
+
+const knightIsAwake = false;
+const archerIsAwake = true;
+const prisonerIsAwake = true;
+const expected = true;
+expect(canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake)).toBe(
+      expected,
+    );
+
+const knightIsAwake = true;
+const archerIsAwake = false;
+const prisonerIsAwake = false;
+const expected = true;
+expect(canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake)).toBe(
+      expected,
+    );
+
+const knightIsAwake = true;
+const archerIsAwake = false;
+const prisonerIsAwake = true;
+const expected = true;
+expect(canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake)).toBe(
+      expected,
+    );
+
+const knightIsAwake = true;
+const archerIsAwake = true;
+const prisonerIsAwake = true;
+const expected = true;
+expect(canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake)).toBe(
+      expected,
+    );
+
+
+const archerIsAwake = false;
+const prisonerIsAwake = false;
+const expected = false;
+expect(canSignalPrisoner(archerIsAwake, prisonerIsAwake)).toBe(expected);
+
+const archerIsAwake = false;
+const prisonerIsAwake = true;
+const expected = true;
+expect(canSignalPrisoner(archerIsAwake, prisonerIsAwake)).toBe(expected);
+
+const archerIsAwake = true;
+const prisonerIsAwake = false;
+const expected = false;
+expect(canSignalPrisoner(archerIsAwake, prisonerIsAwake)).toBe(expected);
+
+const archerIsAwake = true;
+const prisonerIsAwake = true;
+const expected = false;
+expect(canSignalPrisoner(archerIsAwake, prisonerIsAwake)).toBe(expected);
+
+
+const knightIsAwake = false;
+const archerIsAwake = false;
+const prisonerIsAwake = false;
+const petDogIsPresent = false;
+const expected = false;
+expect(
+      canFreePrisoner(
+        knightIsAwake,
+        archerIsAwake,
+        prisonerIsAwake,
+        petDogIsPresent,
+      ),
+    ).toBe(expected);
+
+const knightIsAwake = false;
+const archerIsAwake = false;
+const prisonerIsAwake = false;
+const petDogIsPresent = true;
+const expected = true;
+expect(
+      canFreePrisoner(
+        knightIsAwake,
+        archerIsAwake,
+        prisonerIsAwake,
+        petDogIsPresent,
+      ),
+    ).toBe(expected);
+
+const knightIsAwake = false;
+const archerIsAwake = false;
+const prisonerIsAwake = true;
+const petDogIsPresent = false;
+const expected = true;
+expect(
+      canFreePrisoner(
+        knightIsAwake,
+        archerIsAwake,
+        prisonerIsAwake,
+        petDogIsPresent,
+      ),
+    ).toBe(expected);
+
+const knightIsAwake = false;
+const archerIsAwake = false;
+const prisonerIsAwake = true;
+const petDogIsPresent = true;
+const expected = true;
+expect(
+      canFreePrisoner(
+        knightIsAwake,
+        archerIsAwake,
+        prisonerIsAwake,
+        petDogIsPresent,
+      ),
+    ).toBe(expected);
+
+...
