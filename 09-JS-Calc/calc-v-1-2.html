@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calc v.1.2.</title>
+<meta charset="utf-8">
+<script>
+let a;
+let b;
+let c; //nospiestas pogas (+ - * /) apzīmējums, jeb kods
+
+function fa(){
+a = Number(document.getElementById("pirmaisLogs").value);
+console.log(a);
+}
+function fb(){
+b = Number(document.getElementById("otraisLogs").value);
+console.log(b);
+}
+function zime(dati){
+c=dati;
+console.log(c);
+}
+<!--function summa(){ alert(a+b); }-->
+
+function risinat(){
+let resultats;
+resultats=eval(a+c+b);
+console.log(resultats);
+document.getElementById("tresaisLogs").value=resultats
+}
+
+</script>
+</head>
+
+<body>
+<h1>Mans pirmais kalkulātors</h1>
+<p>Šajā uzdevumā sapratīšu, kā darboties ar mainīgaiem</p>
+<input type="text" id="pirmaisLogs" value="0" oninput="fa()">
+<br>
+<!--<input type="button" id="b1" value="+" onclick="summa()">-->
+<input type="button" value="+" onclick="zime('+')">
+<input type="button" value="-" onclick="zime('-')">
+<input type="button" value="*" onclick="zime('*')">
+<input type="button" value="/" onclick="zime('/')">
+<br>
+<input type="text" id="otraisLogs" value="0" oninput="fb()">
+<br>
+<input type="button" value="=" onclick="risinat()">
+<br>
+<input type="text" id="tresaisLogs" value="0">
+</body>
+</html>
