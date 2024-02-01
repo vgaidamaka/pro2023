@@ -8,40 +8,64 @@
 
 let a=1;
 let b=1;
-let inNumber=0;
-let atbilde=0;
+
+let ca=1;
+let cb=1;
+
+let inNumber=1;
+let atbilde=1;
 
 function inn(){
 inNumber = Number(document.getElementById("in").value);
-console.log(inNumber)
+console.log(inNumber);
+//testa(ca, cb);
 }
 
+function converta(a){
+ca = inNumber*a;
+//console.log(ca);
+testa(ca, cb);
+}
+
+function convertb(b){
+cb = b;
+//console.log(cb);
+testa(ca, cb);
+}
+
+function testa(ca, cb){
+//console.log(`testa a: ${a} b: ${b} ca: ${ca} cb: ${cb}`);
+let c = cb/ca;
+console.log(`conversion: ${c}`);
+//document.getElementById("out").value = c.toFixed(5);
+document.getElementById("out").value = c;
+}
 </script>
 
 </head>
 <body>
-<input type="text" value="0" id="in" onchange="inn()">
+<input type="text" value="1" id="in" onchange="inn()">
 <div>
 <label>
-    <input name="grupaa" type="radio" value="mm" id="amm" onchange="convert(0.001)"> mm
-    <input name="grupaa"  type="radio" value="cm" id="acm" onchange="convert(0.01)"> cm
-	<input name="grupaa"  type="radio" value="dm" id="adm" onchange="convert(0.1)"> dm
-    <input name="grupaa"  type="radio" value="m" id="am" onchange="convert(1)"> m
-	<input name="grupaa"  type="radio" value="km" id="akm" onchange="convert(1000)"> km
+    <input name="grupaa" type="radio" value="mm" id="amm" onchange="converta(1000000)"> mm
+    <input name="grupaa"  type="radio" value="cm" id="acm" onchange="converta(100000)"> cm
+	<input name="grupaa"  type="radio" value="dm" id="adm" onchange="converta(10000)"> dm
+    <input name="grupaa" Checked type="radio" value="m" id="am" onchange="converta(1000)"> m
+	<input name="grupaa"  type="radio" value="km" id="akm" onchange="converta(1)"> km
 </label>
 </div>
 
 <div>
 <label>
-    <input name="grupab" type="radio" value="mm" id="bmm" onchange="result(0.001)"> mm
-    <input name="grupab"  type="radio" value="cm" id="bcm" onchange="result(0.01)"> cm
-	<input name="grupab"  type="radio" value="dm" id="bdm" onchange="result(0.1)"> dm
-    <input name="grupab"  type="radio" value="m" id="bm" onchange="result(1)"> m
-	<input name="grupab"  type="radio" value="km" id="bkm" onchange="result(1000)"> km
+    <input name="grupab" type="radio" value="mm" id="bmm" onchange="convertb(1000000)"> mm
+    <input name="grupab"  type="radio" value="cm" id="bcm" onchange="convertb(100000)"> cm
+	<input name="grupab"  type="radio" value="dm" id="bdm" onchange="convertb(10000)"> dm
+    <input name="grupab" Checked type="radio" value="m" id="bm" onchange="convertb(1000)"> m
+	<input name="grupab"  type="radio" value="km" id="bkm" onchange="convertb(1)"> km
 </label>
 </div>
   
-  <input readonly type="text" value="0" id="out">
+  <input readonly type="text" value="1" id="out">
   
 </body>
 </html>
