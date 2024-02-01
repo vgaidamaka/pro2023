@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lasagna</title>
+</head>
+<body>
+<h1>Šīs ir pirmais HTML dokuments!</h1>
+<p>
+1. Norādiet paredzamo cepeškrāsns laiku minūtēs
+Definējiet konstanti EXPECTED_MINUTES_IN_OVEN, kas norāda, cik minūtes lazanjai jābūt cepeškrāsnī. Tas ir jāeksportē. Saskaņā ar gatavošanas grāmatu paredzamais cepeškrāsns laiks minūtēs ir 40.
+</p>
+<p>
+2. Aprēķiniet atlikušo cepeškrāsns laiku minūtēs
+Ieviesiet atlikušās minūtes cepeškrāsnī, kas kā parametru ņem faktiskās minūtes, kad lazanja ir bijusi cepeškrāsnī, un atgriež, cik minūtes lazanjai vēl jāpaliek cepeškrāsnī, pamatojoties uz paredzamo cepšanas laiku minūtēs pēc iepriekšējā uzdevuma.
+</p>
+<p>
+3. Aprēķiniet gatavošanas laiku minūtēs
+Ieviesiet funkciju readyTimeInMinutes, kas kā parametru izmanto lazanjai pievienoto slāņu skaitu un atgriež, cik minūtes esat pavadījis, gatavojot lazanju, pieņemot, ka katra slāņa pagatavošanai nepieciešamas 2 minūtes.
+</p>
+<p>
+4. Aprēķiniet kopējo darba laiku minūtēs
+Ieviesiet funkciju totalTimeInMinutes, kas izmanto divus parametrus: parametrs numberOfLayers ir slāņu skaits, ko pievienojāt lazanjai, un parametrs factMinutesInOven ir minūšu skaits, cik minūšu lazanja ir bijusi cepeškrāsnī. Funkcijai ir jāatgriež, cik minūtes kopā esat strādājis pie lazanjas gatavošanas, kas ir gatavošanas laika summa minūtēs un laika, ko lazanja šobrīd pavadījusi cepeškrāsnī, summa minūtēs.
+</p>
+<!--<input type="text" id="laiksKrasni" value="0">-->
+<input type="number">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p> Pagatavošanas laiks <span id="countdowntimer">1 </span> Minutes</p>
+
+<script type="text/javascript">
+    var timeleft = 1*60;
+    var cookingTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = (timeleft/60);
+    if(timeleft <= 0)
+        clearInterval(cookingTimer);
+    },1000);
+</script>
+</body>
+</html>

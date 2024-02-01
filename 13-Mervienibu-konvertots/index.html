@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mērvienību kalkulators</title>
+
+<!--<script src="kautkads.js"></script>-->
+<script>
+
+let a=1;
+let b=1;
+let inNumber=0;
+let atbilde=0;
+
+function inn(){
+inNumber = Number(document.getElementById("in").value);
+console.log(inNumber)
+}
+
+</script>
+
+</head>
+<body>
+<input type="text" value="0" id="in" onchange="inn()">
+<div>
+<label>
+    <input name="grupaa" type="radio" value="mm" id="amm" onchange="convert(0.001)"> mm
+    <input name="grupaa"  type="radio" value="cm" id="acm" onchange="convert(0.01)"> cm
+	<input name="grupaa"  type="radio" value="dm" id="adm" onchange="convert(0.1)"> dm
+    <input name="grupaa"  type="radio" value="m" id="am" onchange="convert(1)"> m
+	<input name="grupaa"  type="radio" value="km" id="akm" onchange="convert(1000)"> km
+</label>
+</div>
+
+<div>
+<label>
+    <input name="grupab" type="radio" value="mm" id="bmm" onchange="result(0.001)"> mm
+    <input name="grupab"  type="radio" value="cm" id="bcm" onchange="result(0.01)"> cm
+	<input name="grupab"  type="radio" value="dm" id="bdm" onchange="result(0.1)"> dm
+    <input name="grupab"  type="radio" value="m" id="bm" onchange="result(1)"> m
+	<input name="grupab"  type="radio" value="km" id="bkm" onchange="result(1000)"> km
+</label>
+</div>
+  
+  <input readonly type="text" value="0" id="out">
+  
+</body>
+</html>

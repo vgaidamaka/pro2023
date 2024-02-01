@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Taimeris</title>
+</head>
+<body>
+<p id="demo"></p>
+<script>
+
+let i = 0;
+let timerId = setInterval(function() {
+	displayHello();
+	i++;
+	if (i >= 10) {
+		clearInterval(timerId);
+		}
+}, 1000);
+
+
+function displayHello(){
+document.getElementById("demo").innerHTML += "Hello";
+}
+
+</script>
+</body>
+</html>

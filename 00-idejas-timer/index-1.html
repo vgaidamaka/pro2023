@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Taimeris</title>
+</head>
+<body>
+
+<button id="start">start</button>
+<button id="stop">stop</button>
+
+<script>
+let start = document.querySelector('#start');
+let stop  = document.querySelector('#stop');
+let timerId; // makes the variable global
+
+start.addEventListener('click', function() {
+	timerId = setInterval(function() {
+		console.log('!')
+	}, 1000);
+});
+
+stop.addEventListener('click', function() {
+	clearInterval(timerId);
+});
+
+
+</script>
+
+<button id="myBtn">Try it</button>
+
+<script>
+document.getElementById("myBtn").addEventListener("mouseover", function() {
+  alert("Hello World!");
+});
+</script>
+</body>
+</html>
