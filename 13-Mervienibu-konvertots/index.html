@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Mērvienību kalkulators</title>
+<meta charset="UTF-8">
+<title>Mērvienību kalkulators v 1.4</title>
 
 <!--<script src="kautkads.js"></script>-->
 <script>
@@ -16,13 +17,13 @@ let inNumber=1;
 let atbilde=1;
 
 function inn(){
-inNumber = Number(document.getElementById("in").value);
+inNumber = parseFloat(document.getElementById("in").value);
+//inNumber = Number(document.getElementById("in").value);
 console.log(inNumber);
-//testa(ca, cb);
 }
 
 function converta(a){
-ca = inNumber*a;
+ca = a;
 //console.log(ca);
 testa(ca, cb);
 }
@@ -35,7 +36,7 @@ testa(ca, cb);
 
 function testa(ca, cb){
 //console.log(`testa a: ${a} b: ${b} ca: ${ca} cb: ${cb}`);
-let c = cb/ca;
+let c = inNumber*(cb/ca);
 console.log(`conversion: ${c}`);
 //document.getElementById("out").value = c.toFixed(5);
 document.getElementById("out").value = c;

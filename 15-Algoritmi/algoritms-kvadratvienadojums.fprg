@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="admvgaidamaka"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-07 10:12:11 priek&#353;p."/>
+        <attribute name="created" value="YWRtdmdhaWRhbWFrYTtEMTFSREEyMDE2NzE7MjAyNC0wMy0wNzswODo1OTozMyBwcmlla8WhcC47NDIwNQ=="/>
+        <attribute name="edited" value="YWRtdmdhaWRhbWFrYTtEMTFSREEyMDE2NzE7MjAyNC0wMy0wNzsxMDoxMjoxMSBwcmlla8WhcC47MTs0Mjkx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Real" array="False" size=""/>
+            <declare name="b" type="Real" array="False" size=""/>
+            <declare name="c" type="Real" array="False" size=""/>
+            <declare name="d" type="Real" array="False" size=""/>
+            <declare name="x1" type="Real" array="False" size=""/>
+            <declare name="x2" type="Real" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <if expression="a!=0">
+                <then>
+                    <output expression="&quot;risin&#257;sim kvadr&#257;tvien&#257;dojumu&quot;" newline="True"/>
+                    <assign variable="d" expression="b^2-4*a*c"/>
+                    <output expression="d" newline="True"/>
+                    <comment text="Var rakst&#299;t JS b**2 (b^2)"/>
+                    <if expression="d&lt;0">
+                        <then>
+                            <output expression="&quot;Re&#257;lajos skait&#316;os risin&#257;juma nav&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <assign variable="x1" expression="(-b+sqr(d))/2*a"/>
+                            <assign variable="x2" expression="(-b-sqr(d))/2*a"/>
+                            <output expression="x1" newline="True"/>
+                            <output expression="x2" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;risin&#257;sim line&#257;ru vien&#257;dojumu&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Kvadrātvienādojuma un linieārvienādojuma risināšana</title>
+<script>
+function vienadojums(){
+    let a;
+    let b;
+    let c;
+    let d;
+    let x1;
+    let x2;
+//ģenerēts
+//    a = Number(window.prompt('Enter a value for a'));
+//    b = Number(window.prompt('Enter a value for b'));
+//    c = Number(window.prompt('Enter a value for c'));
+//ģenerēts
+
+//skolēna risinājums
+    a = Number(document.getElementById("a").value);
+    b = Number(document.getElementById("b").value);
+    c = Number(document.getElementById("c").value);
+//skolēna risinājums		
+	
+    if (a != 0) {
+        window.alert("risināsim kvadrātvienādojumu");
+        //ģenerēts
+		//d = Math.pow(b, 2) - 4 * a * c;
+        //ģenerēts
+		//skolēna risinājums
+		d = b**2 - 4 * a * c;
+		//skolēna risinājums
+		window.alert(d);
+
+        // Var rakstīt JS b**2 (b^2)
+        if (d < 0) {
+            window.alert("Reālajos skaitļos risinājuma nav");
+        } else {
+            x1 = (-b + Math.sqrt(d)) / 2 * a;
+            x2 = (-b - Math.sqrt(d)) / 2 * a;
+            window.alert(x1);
+            window.alert(x2);
+        }
+    } else {
+        window.alert("risināsim lineāru vienādojumu");
+        x1 = -c / b;
+        window.alert(x1);
+    }
+document.getElementById("poga").value="resolved";
+}
+</script>
+
+</head>
+<body>
+<h1>Kvadrātvienādojuma un lineārvienādojuma risinātājs</h1>
+<label for="a">a:</label>
+<input type="text" value="0" id="a">
+<label for="b">b: </label>
+<input type="text" value="0" id="b">
+<label for="c">c: </label>
+<input type="text" value="0" id="c">
+<input type="button" value="resolve" id="poga" onclick="vienadojums()">
+
+</body>
+</html>

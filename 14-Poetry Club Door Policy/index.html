@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mērvienību kalkulators v 1.4</title>
+
+<!--<script src="kautkads.js"></script>-->
+<script>
+let line="";
+let word="";
+
+function frontDoorResponse() {
+line = document.getElementById("pUzd").value;
+console.log(line[0]);
+}
+function frontDoorPassword() {
+word = document.getElementById("oUzd").value;
+  let wordd = word.toLowerCase();	//teksts rakstīts ar maziem burtiem
+  let wLength = wordd.length;		//aprēķināts vārda garums
+  let firstSymbol = wordd[0];		//mainīgajā ievietots pirmais simbols
+  console.log(firstSymbol);			//idzrukā, kāds ir pirmais simbols?
+  firstSymbol = firstSymbol.toUpperCase(); //pirmo simbolu rakstam ar lielo burtu
+  console.log(firstSymbol + wordd.slice(1, wLength)); //salīme pirmo simbolu ar tekstu bez pirmā simbola
+}
+
+</script>
+
+</head>
+<body>
+<h1>Atgriezt pirmo teikuma burtu</h1>
+<p>Funkcija atgriež kosolē teikuma pirmo burtu</p>
+<h2>Uzdevuma risinājuma piemērs</h2>
+<p>frontDoorResponse('Stands so high'); => "S"</p>
+<input type="text" value="" id="pUzd">
+<input type="button" value="Atgriezt pirmo teikuma burtu" onclick="frontDoorResponse()">
+
+<h1>Rakstīt vārdu ar lielo burtu</h1>
+<p>Funkcija pārveido tekstu tā lai pirmais byurts  būtu liels, citi mazie</p>
+<h2>Uzdevuma risinājuma piemērs</h2>
+<p>frontDoorResponse('tests'); => "Tests"</p>
+<p>frontDoorResponse('TESTS'); => "Tests"</p>
+<p>frontDoorResponse('Tests'); => "Tests"</p>
+<input type="text" value="" id="oUzd">
+<input type="button" value="Rakstīt vārdu ar lielo burtu" onclick="frontDoorPassword()">
+  
+</body>
+</html>
